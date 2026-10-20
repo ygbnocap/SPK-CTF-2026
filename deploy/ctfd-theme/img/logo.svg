@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="96" viewBox="0 0 300 96">
+<rect x="8" y="8" width="300" height="96" fill="#675ea9"/>
+<rect x="0" y="0" width="300" height="96" fill="#3b2d5e"/>
+<rect x="4" y="4" width="292" height="88" fill="#041c84"/>
+<rect x="4" y="4" width="292" height="18" fill="#7cacfc"/>
+<rect x="250" y="8" width="10" height="10" fill="#c496ca"/>
+<rect x="264" y="8" width="10" height="10" fill="#c496ca"/>
+<rect x="278" y="8" width="10" height="10" fill="#c496ca"/>
+<text x="12" y="17" font-family="monospace" font-size="10" fill="#041c84">spk@ctf: ~</text>
+<text x="14" y="46" font-family="monospace" font-size="20" font-weight="bold" fill="#c496ca">&gt;</text>
+<text x="34" y="46" font-family="monospace" font-size="20" font-weight="bold" fill="#7cacfc">SPK</text>
+<text x="94" y="46" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff">.ctf</text>
+<rect x="162" y="32" width="12" height="18" fill="#c496ca"/>
+<text x="14" y="72" font-family="monospace" font-size="12" fill="#c496ca">SPKctf{welcome_hacker}</text>
+</svg>

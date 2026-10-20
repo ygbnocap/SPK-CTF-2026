@@ -1,0 +1,65 @@
+services:
+  web01:
+    build: ../web01_sqli_login
+    ports: ["${BIND_IP:-127.0.0.1}:8001:5000"]
+    restart: unless-stopped
+  web02:
+    build: ../web02_cookie
+    ports: ["${BIND_IP:-127.0.0.1}:8002:5000"]
+    restart: unless-stopped
+  web03:
+    build: ../web03_xss_bot
+    ports: ["${BIND_IP:-127.0.0.1}:8003:5000"]
+    restart: unless-stopped
+    volumes: ["web03queue:/shared"]
+  web04:
+    build: ../web04_idor
+    ports: ["${BIND_IP:-127.0.0.1}:8004:5000"]
+    restart: unless-stopped
+  web05:
+    build: ../web05_upload
+    ports: ["${BIND_IP:-127.0.0.1}:8005:80"]
+    restart: unless-stopped
+  web06:
+    build: ../web06_ssrf
+    ports: ["${BIND_IP:-127.0.0.1}:8006:5000"]
+    restart: unless-stopped
+    depends_on: [internal]
+  web07:
+    build: ../web07_blind_sqli
+    ports: ["${BIND_IP:-127.0.0.1}:8007:5000"]
+    restart: unless-stopped
+  web08:
+    build: ../web08_jwt
+    ports: ["${BIND_IP:-127.0.0.1}:8008:5000"]
+    restart: unless-stopped
+  web09:
+    build: ../web09_ssti
+    ports: ["${BIND_IP:-127.0.0.1}:8009:5000"]
+    restart: unless-stopped
+  web10:
+    build: ../web10_chain
+    ports: ["${BIND_IP:-127.0.0.1}:8010:5000"]
+    restart: unless-stopped
+    depends_on: [reports]
+  web03bot:
+    build:
+      context: ../web03_xss_bot
+      dockerfile: Dockerfile.bot
+    volumes: ["web03queue:/shared"]
+    depends_on: [web03]
+    restart: unless-stopped
+  internal:
+    build:
+      context: ../web06_ssrf
+      dockerfile: Dockerfile.internal
+    expose: ["9000"]
+    restart: unless-stopped
+  reports:
+    build:
+      context: ../web10_chain
+      dockerfile: Dockerfile.internal
+    expose: ["9010"]
+    restart: unless-stopped
+volumes:
+  web03queue:

@@ -1,0 +1,150 @@
+
+# ==========================================
+# SPK-CTF-2026
+# Public GitHub Repository
+# ==========================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+venv-ctf/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ==========================================
+# CRITICAL SECRETS
+# ==========================================
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Private keys / certificates
+*.key
+*.pem
+*.pfx
+*.p12
+*.p8
+*.jks
+*.keystore
+id_rsa
+id_ed25519
+id_ecdsa
+id_dsa
+
+# Infrastructure credentials
+credentials.json
+secrets.json
+tokens.json
+api_tokens.json
+*.token
+*.secret
+
+# SSH
+.ssh/
+**/.ssh/
+
+# SSL private data
+**/ssl/private/
+**/certificates/private/
+**/letsencrypt/
+**/acme/
+
+# ==========================================
+# CTFd RUNTIME DATA
+# ==========================================
+
+# CTFd source checkout / runtime
+**/ctfd-app/
+
+# Real databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Runtime directories
+**/uploads/
+**/logs/
+**/mysql-data/
+**/redis-data/
+**/docker-data/
+**/volumes/
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.pid
+*.sock
+
+# ==========================================
+# LOGS
+# ==========================================
+
+# Ignore runtime logs
+*.log
+
+# Keep CTF challenge log artifacts
+!forensics/for01_logs/access.log
+!forensics/for06_authlog/auth.log
+
+# ==========================================
+# IMPORTER
+# ==========================================
+
+# Generated local import state
+import_plan.json
+challenge_names_apply.json
+import_report.json
+
+# ==========================================
+# BACKUPS
+# ==========================================
+
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# ==========================================
+# IMPORTANT: KEEP CTF FILES
+# ==========================================
+
+# Do NOT ignore these challenge artifacts:
+# *.zip
+# *.pcap
+# *.dmp
+# *.raw
+# *.enc
+# *.bin
+# *.png
+# *.jpg
+# *.wav
+# *.pdf
+# flag.txt
+# solve.py
+# verify.py
+# gen.py
+# Makefile

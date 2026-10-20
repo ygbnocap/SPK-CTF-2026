@@ -1,0 +1,1 @@
+SPKctf{antidebug_bypassed}

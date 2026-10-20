@@ -1,0 +1,1 @@
+SPKctf{sql_byp4ss_succ3ss}

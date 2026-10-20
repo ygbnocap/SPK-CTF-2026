@@ -1,0 +1,1 @@
+SPKctf{jwt_w34k_s3cr3t_cracked}

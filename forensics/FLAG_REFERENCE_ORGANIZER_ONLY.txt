@@ -1,0 +1,10 @@
+for01_logs SPKctf{fl4g_in_pl4in_s1ght}
+for02_exif SPKctf{3xif_m3t4d4t4_reveals}
+for03_pcap SPKctf{captured_http_credentials}
+for04_disk SPKctf{r3c0v3r_d3l3t3d_fl4g}
+for05_memory SPKctf{m3m0ry_dump_s3cr3t}
+for06_authlog SPKctf{bruteforce_source_detected}
+for07_ftp SPKctf{ftp_data_exfiltration}
+for08_timeline SPKctf{timestomp_detected}
+for09_memkey SPKctf{process_memory_forensics}
+for10_dns SPKctf{dns_exfiltration_traced}

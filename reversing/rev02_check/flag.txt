@@ -1,0 +1,1 @@
+SPKctf{simple_input_check}

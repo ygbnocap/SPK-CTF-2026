@@ -1,0 +1,1 @@
+SPKctf{hardcoded_credentials}
